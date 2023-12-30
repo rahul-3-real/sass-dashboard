@@ -1,12 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Meta Tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Sass Dashboard</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./static/images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./static/images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./static/images/favicon/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/ico"
+      href="./static/images/favicon//favicon.ico"
+    />
+
+    <!-- Links -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
     <link rel="stylesheet" href="./static/scss/style.scss" />
   </head>
-  <body>
-    <h1>Wassup</h1>
+  <body data-theme="dark">
+    <!-- Wrapper -->
+    <div id="wrapper" class="wrapper">
+      <!-- Sidebar -->
+      <aside id="sidebar" class="sidebar">
+        <a href="./index.html" class="logo">
+          <img src="./static/images/logos/main.png" alt="" />
+          <h1>Sass Dashboard</h1>
+        </a>
+
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="./index.html" class="nav-link active">
+              <i class="fad fa-th-large"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link">
+              <i class="fad fa-user"></i>
+              <span>Authentication</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item">
+                <a href="./login.html" class="dropdown-link">Login</a>
+              </li>
+              <li class="dropdown-item">
+                <a href="./register.html" class="dropdown-link">Register</a>
+              </li>
+              <li class="dropdown-item">
+                <a href="./profile.html" class="dropdown-link">Profile</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="./email.html" class="nav-link">
+              <i class="fad fa-envelope"></i>
+              <span>Email</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="./messages.html" class="nav-link">
+              <i class="fad fa-comments"></i>
+              <span>Messages</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="./calendar.html" class="nav-link">
+              <i class="fad fa-calendar-alt"></i>
+              <span>Calendar</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="./charts.html" class="nav-link">
+              <i class="fad fa-chart-pie-alt"></i>
+              <span>Charts</span>
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link">
+              <i class="fad fa-list"></i>
+              <span>Components</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item">
+                <a href="./tables.html" class="dropdown-link">Tables</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Content -->
+      <main id="content" class="content"></main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="./static/js/app.js"></script>
   </body>
 </html>
