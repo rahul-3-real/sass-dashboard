@@ -1,4 +1,5 @@
 @use "../abstract/variables" as var;
+@use "../abstract/mixins" as mixins;
 
 // Sidebar
 .sidebar {
@@ -8,16 +9,16 @@
   width: 70px;
   height: 100vh;
   overflow: hidden;
-  border-right: 1px solid var.$foreground;
+  border-right: 1px solid var.$dark-alt;
   transition: 0.5s ease all;
+  background: var.$dark;
 
   // Logo
   .logo {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    @include mixins.flex-start;
     padding: 25px;
-    border-bottom: 1px solid var.$foreground;
+    border-bottom: 1px solid var.$dark-alt;
+    height: 80px;
 
     img {
       width: 20px;
@@ -44,6 +45,7 @@
     height: calc(100vh - 80px);
     overflow-y: auto;
     scrollbar-width: none;
+    background: var.$dark;
 
     &::-webkit-scrollbar {
       display: none;
@@ -53,14 +55,12 @@
       overflow: hidden;
 
       .nav-link {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
+        @include mixins.flex-start;
         padding: 7px 25px;
         color: var.$light-alt;
         transition: 0.5s ease all;
         position: relative;
-        background: var.$background;
+        background: var.$dark;
         z-index: 1;
 
         i {
@@ -144,18 +144,25 @@
           }
           .dropdown-menu {
             top: 0;
+            left: 0;
             height: auto;
             opacity: 1;
             pointer-events: all;
+            transform: translateX(0);
+            width: 100%;
+            border: 0;
+            background: transparent;
+            box-shadow: none;
           }
         }
       }
     }
   }
+}
 
-  // Show
-  &.show,
-  &:hover {
+// Show
+.wrapper.open {
+  .sidebar {
     width: 250px;
 
     .logo h1 {

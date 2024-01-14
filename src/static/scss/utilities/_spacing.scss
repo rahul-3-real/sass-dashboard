@@ -53,3 +53,16 @@
     margin-bottom: $unit !important;
   }
 }
+
+// Gap
+@each $name, $unit in space.$spacing {
+  .g-#{$name} {
+    gap: $unit !important;
+  }
+  .gx-#{$name} {
+    row-gap: $unit !important;
+  }
+  .gy-#{$name} {
+    column-gap: $unit !important;
+  }
+}
