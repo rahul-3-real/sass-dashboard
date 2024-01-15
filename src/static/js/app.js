@@ -5,28 +5,71 @@ const themeToggle = () => {
   toggle.addEventListener("click", () => {
     if (document.querySelector("body").getAttribute("data-theme") === "dark") {
       document.querySelector("body").setAttribute("data-theme", "light");
-      toggle.innerHTML = `<i class="fad fa-lightbulb-on"></i>`;
+      toggle.innerHTML = `<i class="fal fa-lightbulb-on"></i>`;
       localStorage.setItem("theme", "light");
     } else if (
       document.querySelector("body").getAttribute("data-theme") === "light"
     ) {
       document.querySelector("body").setAttribute("data-theme", "dark");
-      toggle.innerHTML = `<i class="fad fa-lightbulb"></i>`;
+      toggle.innerHTML = `<i class="fal fa-lightbulb"></i>`;
       localStorage.setItem("theme", "dark");
     }
   });
 
   if (localStorage.getItem("theme") === "dark") {
     document.querySelector("body").setAttribute("data-theme", "dark");
-    toggle.innerHTML = `<i class="fad fa-lightbulb"></i>`;
+    toggle.innerHTML = `<i class="fal fa-lightbulb"></i>`;
     localStorage.setItem("theme", "dark");
   } else if (localStorage.getItem("theme") === "light") {
     document.querySelector("body").setAttribute("data-theme", "light");
-    toggle.innerHTML = `<i class="fad fa-lightbulb-on"></i>`;
+    toggle.innerHTML = `<i class="fal fa-lightbulb-on"></i>`;
     localStorage.setItem("theme", "light");
   }
 };
 themeToggle();
+
+// Full Screen Toggle
+const fullScreenToggle = () => {
+  const toggle = document.querySelector("#zoom-toggle");
+  const body = document.querySelector("body");
+
+  const openFullScreen = () => {
+    if (body.requestFullscreen) {
+      body.requestFullscreen();
+    } else if (body.webkitRequestFullscreen) {
+      /* Safari */
+      body.webkitRequestFullscreen();
+    } else if (body.msRequestFullscreen) {
+      /* IE11 */
+      body.msRequestFullscreen();
+    }
+  };
+
+  const closeFullScreen = () => {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    } else if (document.webkitExitFullscreen) {
+      /* Safari */
+      document.webkitExitFullscreen();
+    } else if (document.msExitFullscreen) {
+      /* IE11 */
+      document.msExitFullscreen();
+    }
+  };
+
+  toggle.addEventListener("click", () => {
+    if (toggle.classList.contains("full-screen")) {
+      closeFullScreen();
+      toggle.classList.remove("full-screen");
+      toggle.innerHTML = `<i class="fal fa-expand-wide"></i>`;
+    } else {
+      openFullScreen();
+      toggle.classList.add("full-screen");
+      toggle.innerHTML = `<i class="fal fa-compress-wide"></i>`;
+    }
+  });
+};
+fullScreenToggle();
 
 // Hover Navbar
 const toggleSidebar = () => {
