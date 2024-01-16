@@ -1,3 +1,20 @@
+// Show Greeting
+const showGreeting = () => {
+  const elem = document.querySelector("#greeting");
+  const currentHour = new Date().getHours();
+
+  let greeting;
+  if (currentHour < 12) {
+    greeting = "Good morning!";
+  } else if (currentHour < 18) {
+    greeting = "Good afternoon!";
+  } else {
+    greeting = "Good evening!";
+  }
+
+  elem.textContent = greeting;
+};
+
 // Theme Toggle
 const themeToggle = () => {
   const toggle = document.querySelector("#theme-toggle");
@@ -26,7 +43,6 @@ const themeToggle = () => {
     localStorage.setItem("theme", "light");
   }
 };
-themeToggle();
 
 // Full Screen Toggle
 const fullScreenToggle = () => {
@@ -69,7 +85,6 @@ const fullScreenToggle = () => {
     }
   });
 };
-fullScreenToggle();
 
 // Hover Navbar
 const toggleSidebar = () => {
@@ -90,7 +105,6 @@ const toggleSidebar = () => {
     }
   });
 };
-toggleSidebar();
 
 // Sidebar Dropdown Toggle
 const sidebarDropdownToggle = () => {
@@ -109,7 +123,6 @@ const sidebarDropdownToggle = () => {
     });
   });
 };
-sidebarDropdownToggle();
 
 // Dropdown Toggle
 const dropdownToggle = () => {
@@ -142,4 +155,11 @@ const dropdownToggle = () => {
     }
   });
 };
+
+// Calling Functions
+showGreeting();
+themeToggle();
+fullScreenToggle();
+toggleSidebar();
+sidebarDropdownToggle();
 dropdownToggle();

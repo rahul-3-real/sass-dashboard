@@ -71,7 +71,7 @@ p {
 p a {
   color: var.$text-clr;
   transition: 0.5s ease all;
-  text-decoration: underline !important;
+  text-decoration: none;
 }
 p a:hover {
   color: var.$primary;

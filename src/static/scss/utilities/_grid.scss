@@ -48,3 +48,12 @@
     flex-direction: column-reverse !important;
   }
 }
+
+// Grid
+$grid-cols: 12;
+
+@for $i from 1 through $grid-cols {
+  .col-#{$i} {
+    flex-basis: (100 / ($grid-cols / $i)) * 1%;
+  }
+}

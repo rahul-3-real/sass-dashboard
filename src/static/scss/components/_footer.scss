@@ -1,0 +1,36 @@
+@use "../abstract/variables" as var;
+
+// Footer
+.footer {
+  border-top: 1px solid var.$foreground;
+  position: relative;
+  padding: 15px 0;
+
+  p {
+    font-size: 14px;
+    font-weight: 400;
+    color: var.$text-clr;
+
+    a {
+      font-weight: 600;
+      color: var.$primary;
+    }
+  }
+
+  .social {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+
+    a {
+      color: var.$text-clr;
+      font-size: 16px;
+      transition: 0.5s ease all;
+
+      &:hover {
+        color: var.$primary;
+      }
+    }
+  }
+}
