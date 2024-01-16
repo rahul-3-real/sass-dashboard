@@ -104,13 +104,15 @@
 
         .dropdown-menu {
           position: relative;
-          top: -100px;
+          top: 0;
+          left: 0;
           height: 0;
           overflow: hidden;
           opacity: 0;
           pointer-events: none;
           padding: 0 20px;
           transition: 0.5s ease all;
+          transform: translateX(0);
 
           .dropdown-item {
             margin-bottom: 5px;
@@ -144,11 +146,9 @@
           }
           .dropdown-menu {
             top: 0;
-            left: 0;
             height: auto;
             opacity: 1;
             pointer-events: all;
-            transform: translateX(0);
             width: 100%;
             border: 0;
             background: transparent;

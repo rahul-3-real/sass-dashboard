@@ -1,1 +1,37 @@
 @use "../abstract/variables" as var;
+
+// Buttons
+.btn {
+  display: inline-block;
+  padding: 5px 15px;
+  background: var.$primary;
+  border: 1px solid var.$primary;
+  outline: 0;
+  box-shadow: none;
+  color: var.$light;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: capitalize;
+  transition: 0.5s ease all;
+
+  &-primary {
+    background: var.$primary;
+    color: var.$light;
+
+    &:hover {
+      background: var.$background;
+      color: var.$heading-clr;
+    }
+  }
+
+  &-outline-primary {
+    background: var.$background;
+    color: var.$light;
+
+    &:hover {
+      background: var.$primary;
+      color: var.$heading-clr;
+    }
+  }
+}

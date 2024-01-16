@@ -1,0 +1,35 @@
+@use "../abstract/variables" as var;
+
+// Breadcrumb
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 10px;
+
+  .breadcrumb-item {
+    font-size: 12px;
+    font-size: 400;
+    color: var.$text-clr;
+    line-height: 100%;
+
+    &.active {
+      color: var.$primary;
+    }
+
+    &::after {
+      content: "\f054";
+      font-family: "Font Awesome 5 Pro";
+      margin: auto 10px;
+      font-size: 7px;
+    }
+
+    &:last-child::after {
+      display: none;
+    }
+
+    .breadcrumb-link {
+      color: var.$heading-clr;
+    }
+  }
+}

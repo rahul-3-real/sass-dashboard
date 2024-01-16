@@ -90,19 +90,31 @@ const fullScreenToggle = () => {
 const toggleSidebar = () => {
   const wrapper = document.querySelector("#wrapper");
   const toggle = wrapper.querySelector("#sidebar-toggle");
+  const sidebar = wrapper.querySelector("#sidebar");
+  const items = document.querySelectorAll(
+    "#sidebar .nav-list .nav-item.dropdown"
+  );
 
   toggle.addEventListener("click", () => {
     if (wrapper.classList.contains("open")) {
       wrapper.classList.remove("open");
-      const items = document.querySelectorAll(
-        "#sidebar .nav-list .nav-item.dropdown"
-      );
       items.forEach((item) => {
         item.classList.remove("show");
       });
     } else {
       wrapper.classList.add("open");
     }
+  });
+
+  sidebar.addEventListener("mouseenter", () => {
+    wrapper.classList.add("open");
+  });
+
+  sidebar.addEventListener("mouseleave", () => {
+    wrapper.classList.remove("open");
+    items.forEach((item) => {
+      item.classList.remove("show");
+    });
   });
 };
 
