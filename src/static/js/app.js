@@ -5,24 +5,24 @@ const themeToggle = () => {
   toggle.addEventListener("click", () => {
     if (document.querySelector("body").getAttribute("data-theme") === "dark") {
       document.querySelector("body").setAttribute("data-theme", "light");
-      toggle.innerHTML = `<i class="fal fa-lightbulb-on"></i>`;
+      toggle.innerHTML = `<i class="fad fa-lightbulb-on"></i>`;
       localStorage.setItem("theme", "light");
     } else if (
       document.querySelector("body").getAttribute("data-theme") === "light"
     ) {
       document.querySelector("body").setAttribute("data-theme", "dark");
-      toggle.innerHTML = `<i class="fal fa-lightbulb"></i>`;
+      toggle.innerHTML = `<i class="fad fa-lightbulb"></i>`;
       localStorage.setItem("theme", "dark");
     }
   });
 
   if (localStorage.getItem("theme") === "dark") {
     document.querySelector("body").setAttribute("data-theme", "dark");
-    toggle.innerHTML = `<i class="fal fa-lightbulb"></i>`;
+    toggle.innerHTML = `<i class="fad fa-lightbulb"></i>`;
     localStorage.setItem("theme", "dark");
   } else if (localStorage.getItem("theme") === "light") {
     document.querySelector("body").setAttribute("data-theme", "light");
-    toggle.innerHTML = `<i class="fal fa-lightbulb-on"></i>`;
+    toggle.innerHTML = `<i class="fad fa-lightbulb-on"></i>`;
     localStorage.setItem("theme", "light");
   }
 };
@@ -61,11 +61,11 @@ const fullScreenToggle = () => {
     if (toggle.classList.contains("full-screen")) {
       closeFullScreen();
       toggle.classList.remove("full-screen");
-      toggle.innerHTML = `<i class="fal fa-expand-wide"></i>`;
+      toggle.innerHTML = `<i class="fad fa-expand-wide"></i>`;
     } else {
       openFullScreen();
       toggle.classList.add("full-screen");
-      toggle.innerHTML = `<i class="fal fa-compress-wide"></i>`;
+      toggle.innerHTML = `<i class="fad fa-compress-wide"></i>`;
     }
   });
 };
