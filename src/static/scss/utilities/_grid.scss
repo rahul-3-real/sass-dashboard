@@ -5,55 +5,101 @@
   align-items: flex-start;
   justify-content: flex-start;
   gap: 20px;
+}
 
-  &.align-start {
+.align- {
+  &start {
     align-items: flex-start !important;
   }
-  &.align-end {
+  &end {
     align-items: flex-end !important;
   }
-  &.align-center {
+  &center {
     align-items: center !important;
   }
-  &.align-stretch {
+  &stretch {
     align-items: stretch !important;
   }
+}
 
-  &.justify-start {
+.justify- {
+  &start {
     justify-content: flex-start !important;
   }
-  &.justify-end {
+  &end {
     justify-content: flex-end !important;
   }
-  &.justify-center {
+  &center {
     justify-content: center !important;
   }
-  &.justify-between {
+  &between {
     justify-content: space-between !important;
   }
-  &.justify-around {
+  &around {
     justify-content: space-around !important;
   }
+}
 
-  &.flex-row {
+.flex- {
+  &row {
     flex-direction: row !important;
   }
-  &.flex-row-reverse {
+  &row-reverse {
     flex-direction: row-reverse !important;
   }
-  &.flex-column {
+  &column {
     flex-direction: column !important;
   }
-  &.flex-column-reverse {
+  &column-reverse {
     flex-direction: column-reverse !important;
   }
 }
 
-// Grid
-$grid-cols: 12;
+// Column
+.d-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 30px;
 
-@for $i from 1 through $grid-cols {
-  .col-#{$i} {
-    flex-basis: (100 / ($grid-cols / $i)) * 1%;
+  @for $i from 1 through 12 {
+    .col-#{$i} {
+      grid-column: span $i;
+    }
+  }
+
+  // Large Screens (lg)
+  @media (max-width: 992px) {
+    @for $i from 1 through 12 {
+      .col-lg-#{$i} {
+        grid-column: span $i;
+      }
+    }
+  }
+
+  // Medium screens (md)
+  @media (max-width: 992px) {
+    @for $i from 1 through 12 {
+      .col-md-#{$i} {
+        grid-column: span $i;
+      }
+    }
+  }
+
+  // Small screens (sm)
+  @media (max-width: 768px) {
+    @for $i from 1 through 12 {
+      .col-sm-#{$i} {
+        grid-column: span $i;
+      }
+    }
+  }
+
+  // Extra small screens (xs)
+  @media (max-width: 576px) {
+    @for $i from 1 through 12 {
+      .col-xs-#{$i} {
+        grid-column: span $i;
+      }
+    }
   }
 }

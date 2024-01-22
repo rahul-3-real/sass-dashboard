@@ -241,8 +241,9 @@
         <!-- Section -->
         <section class="section" id="section">
           <div class="container">
+            <!-- Page Title -->
             <div class="page-title">
-              <div class="row align-center">
+              <div class="d-grid align-center">
                 <div class="col-6">
                   <h1>Dashboard</h1>
                   <ol class="breadcrumb">
@@ -260,13 +261,33 @@
                 </div>
               </div>
             </div>
+
+            <!-- Chart -->
+            <div class="mt-5 d-grid">
+              <div class="col-8">
+                <div class="card">
+                  <div class="card-header"></div>
+                  <div class="card-body">
+                    <div id="production-chart"></div>
+                  </div>
+                  <div class="card-footer"></div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="card">
+                  <div class="card-header"></div>
+                  <div class="card-body"></div>
+                  <div class="card-footer"></div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
         <!-- Footer -->
         <footer id="footer" class="footer">
           <div class="container">
-            <div class="row align-center">
+            <div class="d-grid">
               <div class="col-6">
                 <p>
                   Made with <i class="fas fa-heart text-primary"></i> by
@@ -301,5 +322,62 @@
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="./static/js/app.js"></script>
+
+    <script>
+      const productionChart = () => {
+        var options = {
+          series: [
+            {
+              name: "series1",
+              data: [31, 40, 28, 51, 42, 109, 100],
+            },
+            {
+              name: "series2",
+              data: [11, 32, 45, 32, 34, 52, 41],
+            },
+          ],
+          chart: {
+            height: 350,
+            type: "area",
+            toolbar: {
+              show: false,
+            },
+          },
+          dataLabels: {
+            enabled: false,
+          },
+          stroke: {
+            curve: "smooth",
+          },
+          grid: {
+            borderColor: "#a9a9a93d",
+          },
+          xaxis: {
+            type: "datetime",
+            categories: [
+              "2018-09-19T00:00:00.000Z",
+              "2018-09-19T01:30:00.000Z",
+              "2018-09-19T02:30:00.000Z",
+              "2018-09-19T03:30:00.000Z",
+              "2018-09-19T04:30:00.000Z",
+              "2018-09-19T05:30:00.000Z",
+              "2018-09-19T06:30:00.000Z",
+            ],
+          },
+          tooltip: {
+            x: {
+              format: "dd/MM/yy HH:mm",
+            },
+          },
+        };
+
+        var chart = new ApexCharts(
+          document.querySelector("#production-chart"),
+          options
+        );
+        chart.render();
+      };
+      productionChart();
+    </script>
   </body>
 </html>
