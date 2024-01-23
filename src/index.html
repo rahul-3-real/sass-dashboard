@@ -479,7 +479,27 @@
       expensesChart();
 
       // Stats Counter
-      const statsCounter = () => {};
+      const statsCounter = () => {
+        const elements = document.querySelectorAll("[data-count]");
+
+        elements.forEach(function (element) {
+          const targetValue = parseInt(element.getAttribute("data-count"));
+          let count = 0;
+          const duration = 2000; // 2 seconds
+          const stepTime = duration / targetValue;
+
+          const updateCount = () => {
+            count += 5;
+            element.textContent = count;
+            if (count < targetValue) {
+              setTimeout(updateCount, stepTime);
+            }
+          };
+
+          updateCount();
+        });
+      };
+      statsCounter();
     </script>
   </body>
 </html>
