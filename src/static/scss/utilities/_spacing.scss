@@ -66,3 +66,17 @@
     column-gap: $unit !important;
   }
 }
+
+// Height
+@each $name, $unit in space.$percentage {
+  .h-#{$name} {
+    height: $unit !important;
+  }
+}
+
+// Weight
+@each $name, $unit in space.$percentage {
+  .w-#{$name} {
+    height: $unit !important;
+  }
+}

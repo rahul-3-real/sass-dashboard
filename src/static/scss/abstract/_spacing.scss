@@ -25,3 +25,21 @@ $spacing: (
   "19": #{$spacer * 19},
   "20": #{$spacer * 20},
 );
+
+// Percentage
+$percent: 10%;
+
+$percentage: (
+  "auto": auto,
+  "0": 0,
+  "10": #{$percent * 1},
+  "20": #{$percent * 2},
+  "30": #{$percent * 3},
+  "40": #{$percent * 4},
+  "50": #{$percent * 5},
+  "60": #{$percent * 6},
+  "70": #{$percent * 7},
+  "80": #{$percent * 8},
+  "90": #{$percent * 9},
+  "100": #{$percent * 10},
+);

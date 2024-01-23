@@ -262,22 +262,82 @@
               </div>
             </div>
 
+            <!-- Stats -->
+            <div class="mt-10 d-grid">
+              <div class="col-3">
+                <div class="card stats-card">
+                  <div class="card-body">
+                    <div class="d-flex align-center justify-between">
+                      <h6><span data-count="1628">1628</span>+</h6>
+                      <i class="fal fa-pencil-paintbrush"></i>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <h6>Website Designing</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="card stats-card">
+                  <div class="card-body">
+                    <div class="d-flex align-center justify-between">
+                      <h6><span data-count="1537">1537</span>+</h6>
+                      <i class="fal fa-terminal"></i>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <h6>Website Development</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="card stats-card">
+                  <div class="card-body">
+                    <div class="d-flex align-center justify-between">
+                      <h6><span data-count="1456">1456</span>+</h6>
+                      <i class="fal fa-suitcase"></i>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <h6>Brand Building</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="card stats-card">
+                  <div class="card-body">
+                    <div class="d-flex align-center justify-between">
+                      <h6><span data-count="1521">1521</span>+</h6>
+                      <i class="fal fa-mobile"></i>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <h6>Responsive Design</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <!-- Chart -->
-            <div class="mt-5 d-grid">
+            <div class="mt-10 d-grid">
               <div class="col-8">
-                <div class="card">
-                  <div class="card-header"></div>
+                <div class="card h-100">
+                  <div class="card-header">
+                    <h5>Production Chart</h5>
+                  </div>
                   <div class="card-body">
                     <div id="production-chart"></div>
                   </div>
-                  <div class="card-footer"></div>
                 </div>
               </div>
               <div class="col-4">
-                <div class="card">
-                  <div class="card-header"></div>
-                  <div class="card-body"></div>
-                  <div class="card-footer"></div>
+                <div class="card h-100">
+                  <div class="card-header">
+                    <h5>Expenses Chart</h5>
+                  </div>
+                  <div class="card-body">
+                    <div id="expenses-chart"></div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -324,15 +384,16 @@
     <script src="./static/js/app.js"></script>
 
     <script>
+      // Production Chart
       const productionChart = () => {
         var options = {
           series: [
             {
-              name: "series1",
+              name: "Previous Year",
               data: [31, 40, 28, 51, 42, 109, 100],
             },
             {
-              name: "series2",
+              name: "Current Year",
               data: [11, 32, 45, 32, 34, 52, 41],
             },
           ],
@@ -378,6 +439,47 @@
         chart.render();
       };
       productionChart();
+
+      // Expenses Chart
+      const expensesChart = () => {
+        let options = {
+          series: [14, 23, 21, 17, 15],
+          chart: {
+            type: "polarArea",
+          },
+          plotOptions: {
+            polarArea: {
+              rings: {
+                strokeWidth: 1,
+                strokeColor: "#a9a9a93d",
+              },
+              spokes: {
+                strokeWidth: 1,
+                connectorColors: "#a9a9a93d",
+              },
+            },
+          },
+          legend: {
+            position: "bottom",
+          },
+          stroke: {
+            colors: ["#fff"],
+          },
+          fill: {
+            opacity: 0.9,
+          },
+        };
+
+        let chart = new ApexCharts(
+          document.querySelector("#expenses-chart"),
+          options
+        );
+        chart.render();
+      };
+      expensesChart();
+
+      // Stats Counter
+      const statsCounter = () => {};
     </script>
   </body>
 </html>
