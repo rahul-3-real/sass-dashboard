@@ -384,121 +384,15 @@
     <script src="./static/js/app.js"></script>
 
     <script>
-      // Production Chart
-      const productionChart = () => {
-        var options = {
-          series: [
-            {
-              name: "Previous Year",
-              data: [31, 40, 28, 51, 42, 109, 100],
-            },
-            {
-              name: "Current Year",
-              data: [11, 32, 45, 32, 34, 52, 41],
-            },
-          ],
-          chart: {
-            height: 350,
-            type: "area",
-            toolbar: {
-              show: false,
-            },
-          },
-          dataLabels: {
-            enabled: false,
-          },
-          stroke: {
-            curve: "smooth",
-          },
-          grid: {
-            borderColor: "#a9a9a93d",
-          },
-          xaxis: {
-            type: "datetime",
-            categories: [
-              "2018-09-19T00:00:00.000Z",
-              "2018-09-19T01:30:00.000Z",
-              "2018-09-19T02:30:00.000Z",
-              "2018-09-19T03:30:00.000Z",
-              "2018-09-19T04:30:00.000Z",
-              "2018-09-19T05:30:00.000Z",
-              "2018-09-19T06:30:00.000Z",
-            ],
-          },
-          tooltip: {
-            x: {
-              format: "dd/MM/yy HH:mm",
-            },
-          },
-        };
-
-        var chart = new ApexCharts(
-          document.querySelector("#production-chart"),
-          options
-        );
-        chart.render();
-      };
+      // Calling Functions
+      themeToggle();
+      fullScreenToggle();
+      toggleSidebar();
+      sidebarDropdownToggle();
+      dropdownToggle();
+      showGreeting();
       productionChart();
-
-      // Expenses Chart
-      const expensesChart = () => {
-        let options = {
-          series: [14, 23, 21, 17, 15],
-          chart: {
-            type: "polarArea",
-          },
-          plotOptions: {
-            polarArea: {
-              rings: {
-                strokeWidth: 1,
-                strokeColor: "#a9a9a93d",
-              },
-              spokes: {
-                strokeWidth: 1,
-                connectorColors: "#a9a9a93d",
-              },
-            },
-          },
-          legend: {
-            position: "bottom",
-          },
-          stroke: {
-            colors: ["#fff"],
-          },
-          fill: {
-            opacity: 0.9,
-          },
-        };
-
-        let chart = new ApexCharts(
-          document.querySelector("#expenses-chart"),
-          options
-        );
-        chart.render();
-      };
       expensesChart();
-
-      // Stats Counter
-      const statsCounter = () => {
-        const elements = document.querySelectorAll("[data-count]");
-
-        elements.forEach(function (element) {
-          const targetValue = parseInt(element.getAttribute("data-count"));
-          let count = 0;
-          const duration = 2000; // 2 seconds
-          const stepTime = duration / targetValue;
-
-          const updateCount = () => {
-            count += 5;
-            element.textContent = count;
-            if (count < targetValue) {
-              setTimeout(updateCount, stepTime);
-            }
-          };
-
-          updateCount();
-        });
-      };
       statsCounter();
     </script>
   </body>

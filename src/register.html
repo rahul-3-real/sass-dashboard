@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sass Dashboard</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./static/images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./static/images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./static/images/favicon/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/ico"
+      href="./static/images/favicon//favicon.ico"
+    />
+
+    <!-- Links -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
+    <link rel="stylesheet" href="./static/scss/style.scss" />
+  </head>
+  <body data-theme="dark">
+    <!-- Auth Pages -->
+    <section class="auth-page">
+      <div class="card">
+        <div class="card-body">
+          <h1 class="heading mb-3">Register</h1>
+          <h5 class="sub-heading mb-7">
+            Stay updated on your professional work
+          </h5>
+          <form action="./index.html" method="POST">
+            <div class="form-group">
+              <label for="fullname-input" class="form-label">
+                Full Name <span class="text-primary">*</span>
+              </label>
+              <input
+                type="text"
+                id="fullname-input"
+                class="form-control"
+                placeholder="Full Name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="username-input" class="form-label">
+                Username <span class="text-primary">*</span>
+              </label>
+              <input
+                type="text"
+                id="username-input"
+                class="form-control"
+                placeholder="Username"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="email-input" class="form-label">
+                Email Id <span class="text-primary">*</span>
+              </label>
+              <input
+                type="email"
+                id="email-input"
+                class="form-control"
+                placeholder="Email Id."
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="password-input" class="form-label">
+                Password <span class="text-primary">*</span>
+              </label>
+              <input
+                type="password"
+                id="password-input"
+                class="form-control"
+                placeholder="Password"
+                required
+              />
+            </div>
+            <button class="btn btn-md btn-primary" type="submit">Login</button>
+          </form>
+        </div>
+        <div class="card-footer">
+          <p>
+            Already have an account?
+            <a href="./login.html" class="text-primary">Login</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="./static/js/app.js"></script>
+  </body>
+</html>

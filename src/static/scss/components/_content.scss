@@ -18,3 +18,18 @@
     width: calc(100% - 250px);
   }
 }
+
+// Heading
+.heading {
+  font-size: 25px;
+  font-weight: 700;
+  color: var.$primary;
+  text-transform: uppercase;
+  line-height: 100%;
+}
+.sub-heading {
+  font-size: 18px;
+  font-weight: 600;
+  color: var.$text-clr;
+  line-height: 100%;
+}
