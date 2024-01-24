@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile - Sass Dashboard</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./static/images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./static/images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./static/images/favicon/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/ico"
+      href="./static/images/favicon//favicon.ico"
+    />
+
+    <!-- Links -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
+    <link rel="stylesheet" href="./static/scss/style.scss" />
+  </head>
+  <body data-theme="dark">
+    <!-- Wrapper -->
+    <div id="wrapper" class="wrapper">
+      <!-- Sidebar -->
+      <aside id="sidebar" class="sidebar">
+        <a href="./index.html" class="logo">
+          <img src="./static/images/logos/main.png" alt="" />
+          <h1>Sass Dashboard</h1>
+        </a>
+
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="./index.html" class="nav-link">
+              <i class="fad fa-th-large"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link active">
+              <i class="fad fa-user"></i>
+              <span>Authentication</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item">
+                <a href="./login.html" class="dropdown-link">Login</a>
+              </li>
+              <li class="dropdown-item">
+                <a href="./register.html" class="dropdown-link">Register</a>
+              </li>
+              <li class="dropdown-item">
+                <a href="./profile.html" class="dropdown-link">Profile</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="./email.html" class="nav-link">
+              <i class="fad fa-envelope"></i>
+              <span>Email</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="./messages.html" class="nav-link">
+              <i class="fad fa-comments"></i>
+              <span>Messages</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="./calendar.html" class="nav-link">
+              <i class="fad fa-calendar-alt"></i>
+              <span>Calendar</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="./charts.html" class="nav-link">
+              <i class="fad fa-chart-pie-alt"></i>
+              <span>Charts</span>
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link">
+              <i class="fad fa-list"></i>
+              <span>Components</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item">
+                <a href="./tables.html" class="dropdown-link">Tables</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Content -->
+      <main id="content" class="content">
+        <!-- Navbar -->
+        <nav class="navbar" id="navbar">
+          <div class="container">
+            <div class="d-flex align-center justify-between">
+              <div class="col-start">
+                <div class="d-flex align-center justify-start g-5">
+                  <button id="sidebar-toggle" class="sidebar-toggle-btn">
+                    <i class="fad fa-bars"></i>
+                  </button>
+                  <h6 id="greeting" class="greeting"></h6>
+                </div>
+              </div>
+              <div class="col-end">
+                <div class="d-flex align-center justify-end g-5">
+                  <!-- Search -->
+                  <div id="search" class="search dropdown drop-end">
+                    <button class="dropdown-toggle">
+                      <i class="fad fa-search"></i>
+                    </button>
+                    <div class="dropdown-menu">
+                      <form>
+                        <i class="fad fa-search"></i>
+                        <input type="search" placeholder="Search..." />
+                      </form>
+                      <ul class="search-list">
+                        <li class="list-item">
+                          <b>Recently Searched :</b>
+                        </li>
+                        <li class="list-item">
+                          <i class="fad fa-dot-circle"></i>
+                          <span>Lorem, ipsum dolor.</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- Notification -->
+                  <div id="notification" class="notification dropdown drop-end">
+                    <button class="dropdown-toggle">
+                      <i class="fad fa-bell"></i>
+                      <span class="active-notification"></span>
+                    </button>
+                    <div class="dropdown-menu">
+                      <ul class="notification-list">
+                        <li class="list-item">
+                          <b>Notifications :</b>
+                        </li>
+                        <li class="list-item">
+                          <i class="fad fa-dot-circle"></i>
+                          <span>Lorem, ipsum dolor.</span>
+                        </li>
+                        <li class="list-item">
+                          <i class="fad fa-dot-circle"></i>
+                          <span>Lorem, ipsum dolor.</span>
+                        </li>
+                        <li class="list-item">
+                          <i class="fad fa-dot-circle"></i>
+                          <span>Lorem, ipsum dolor.</span>
+                        </li>
+                        <li class="list-item">
+                          <i class="fad fa-dot-circle"></i>
+                          <span>Lorem, ipsum dolor.</span>
+                        </li>
+                        <li class="list-item">
+                          <i class="fad fa-dot-circle"></i>
+                          <span>Lorem, ipsum dolor.</span>
+                        </li>
+                        <li class="list-item">
+                          <i class="fad fa-dot-circle"></i>
+                          <span>Lorem, ipsum dolor.</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- Theme Toggle -->
+                  <button id="theme-toggle" class="theme-toggle">
+                    <i class="fad fa-lightbulb"></i>
+                  </button>
+
+                  <!-- Zoom Toggle -->
+                  <button id="zoom-toggle" class="zoom-toggle">
+                    <i class="fad fa-expand-wide"></i>
+                  </button>
+
+                  <!-- Profile -->
+                  <div id="profile" class="profile dropdown drop-end">
+                    <button class="dropdown-toggle">
+                      <img src="./static/images/avatar/boy.jpg" alt="" />
+                    </button>
+                    <div class="dropdown-menu">
+                      <div class="profile-head">
+                        <div class="image">
+                          <img src="./static/images/avatar/boy.jpg" alt="" />
+                        </div>
+                        <div class="text">
+                          <h6>John Doe <sup>Pro</sup></h6>
+                          <p>johndoe@company.com</p>
+                        </div>
+                      </div>
+                      <ul class="profile-nav">
+                        <li class="nav-item">
+                          <a class="nav-link" href="./profile.html"
+                            >My Profile</a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="./projects.html">
+                            My Projects
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="./account-settings.html">
+                            Account Settings
+                          </a>
+                        </li>
+                        <li class="nav-divider"></li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="./login.html">Sign Out</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Section -->
+        <section class="section" id="section">
+          <div class="container">
+            <!-- Page Title -->
+            <div class="page-title">
+              <div class="d-grid align-center">
+                <div class="col-6">
+                  <h1>Profile</h1>
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                      <a href="./index.html" class="breadcrumb-link">
+                        Dashboard
+                      </a>
+                    </li>
+                    <li class="breadcrumb-item active">Profile</li>
+                  </ol>
+                </div>
+                <div class="col-6"></div>
+              </div>
+            </div>
+
+            <!-- Profile -->
+            <div class="card mt-5 profile-card">
+              <div class="card-body">
+                <div class="d-grid">
+                  <div class="col-2">
+                    <div class="image">
+                      <img src="./static/images/avatar/boy.jpg" alt="" />
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <h1>John Doe <sup>Pro</sup></h1>
+                    <h3 class="text-primary">Fullstack Web Developer</h3>
+                    <h3>
+                      <i class="fal fa-suitcase text-primary"></i>
+                      <a href="#" target="_blank" class="text-heading-clr">
+                        Company Name
+                      </a>
+                    </h3>
+                    <div class="d-flex align-center justify-start g-2 mt-7">
+                      <a href="#" class="btn btn-primary"> View Portfolio </a>
+                      <a href="#" class="btn btn-outline-primary">
+                        Contact Now
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="card bg-foreground h-100">
+                      <div class="card-body">
+                        <div class="info">
+                          <div class="icon">
+                            <i class="fal fa-mobile"></i>
+                          </div>
+                          <div class="text">
+                            <a href="tel:9876543210">+91-9876543210</a>
+                          </div>
+                        </div>
+                        <div class="info">
+                          <div class="icon">
+                            <i class="fal fa-envelope"></i>
+                          </div>
+                          <div class="text">
+                            <a href="mailto:info@company.com">
+                              info@company.com
+                            </a>
+                          </div>
+                        </div>
+                        <div class="info">
+                          <div class="icon">
+                            <i class="fal fa-map"></i>
+                          </div>
+                          <div class="text">
+                            <a href="#">Thane, Maharashtra.</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer" class="footer">
+          <div class="container">
+            <div class="d-grid">
+              <div class="col-6">
+                <p>
+                  Made with <i class="fas fa-heart text-primary"></i> by
+                  <a href="#" target="_blank">Rahul Yadav</a>
+                </p>
+              </div>
+              <div class="col-6">
+                <div class="social">
+                  <a href="#" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a href="#" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                  <a href="#" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a href="#" target="_blank">
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a href="#" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="./static/js/app.js"></script>
+
+    <script>
+      // Calling Functions
+      themeToggle();
+      fullScreenToggle();
+      toggleSidebar();
+      sidebarDropdownToggle();
+      dropdownToggle();
+      showGreeting();
+    </script>
+  </body>
+</html>
