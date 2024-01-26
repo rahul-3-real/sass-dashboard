@@ -4,7 +4,7 @@
     <!-- Meta Tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tables - Sass Dashboard</title>
+    <title>Charts - Sass Dashboard</title>
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -88,13 +88,13 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="./charts.html" class="nav-link">
+            <a href="./charts.html" class="nav-link active">
               <i class="fad fa-chart-pie-alt"></i>
               <span>Charts</span>
             </a>
           </li>
           <li class="nav-item dropdown">
-            <a href="#" class="nav-link active">
+            <a href="#" class="nav-link">
               <i class="fad fa-list"></i>
               <span>Components</span>
             </a>
@@ -245,14 +245,14 @@
             <div class="page-title">
               <div class="d-grid align-center">
                 <div class="col-6">
-                  <h1>Tables</h1>
+                  <h1>Charts</h1>
                   <ol class="breadcrumb">
                     <li class="breadcrumb-item">
                       <a href="./index.html" class="breadcrumb-link">
                         Dashboard
                       </a>
                     </li>
-                    <li class="breadcrumb-item active">Tables</li>
+                    <li class="breadcrumb-item active">Chart</li>
                   </ol>
                 </div>
                 <div class="col-6">
@@ -266,27 +266,27 @@
               </div>
             </div>
 
-            <!-- Table -->
-            <div class="card mt-7">
-              <div class="card-header">
-                <h5>Mock Data Table</h5>
+            <!-- Chart -->
+            <div class="mt-10 d-grid">
+              <div class="col-8">
+                <div class="card h-100">
+                  <div class="card-header">
+                    <h5>Production Chart</h5>
+                  </div>
+                  <div class="card-body">
+                    <div id="production-chart"></div>
+                  </div>
+                </div>
               </div>
-              <div class="card-body">
-                <table id="data-table" class="table">
-                  <thead>
-                    <tr>
-                      <th>Id.</th>
-                      <th>First Name</th>
-                      <th>Last Name</th>
-                      <th>Email</th>
-                      <th>Gender</th>
-                      <th>IP Address</th>
-                      <th style="width: 400px">Bio</th>
-                    </tr>
-                  </thead>
-                  <tbody></tbody>
-                </table>
-                <div id="pagination" class="pagination mt-5"></div>
+              <div class="col-4">
+                <div class="card h-100">
+                  <div class="card-header">
+                    <h5>Expenses Chart</h5>
+                  </div>
+                  <div class="card-body">
+                    <div id="expenses-chart"></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -339,7 +339,8 @@
       sidebarDropdownToggle();
       dropdownToggle();
       showGreeting();
-      dataTable();
+      productionChart();
+      expensesChart();
     </script>
   </body>
 </html>
