@@ -378,3 +378,14 @@ const dataTable = () => {
 
   fetchData();
 };
+
+// Calendar
+const calendar = () => {
+  document.addEventListener("DOMContentLoaded", function () {
+    const calendarEl = document.querySelector("#calendar");
+    const calendar = new FullCalendar.Calendar(calendarEl, {
+      initialView: "dayGridMonth",
+    });
+    calendar.render();
+  });
+};

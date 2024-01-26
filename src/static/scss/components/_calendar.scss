@@ -1,0 +1,31 @@
+@use "../abstract/variables" as var;
+
+.calendar,
+.fc {
+  .fc-toolbar-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var.$heading-clr !important;
+  }
+
+  th {
+    color: var.$heading-clr;
+  }
+  td {
+    color: var.$text-clr;
+  }
+
+  .fc-button {
+    background-color: var.$primary !important;
+    border-color: var.$primary !important;
+    transition: 0.5s ease all;
+    outline: 0 !important;
+    box-shadow: none !important;
+    text-transform: capitalize;
+
+    &:hover {
+      background: var.$background !important;
+      border-color: var.$primary !important;
+    }
+  }
+}
