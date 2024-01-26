@@ -281,3 +281,100 @@ const statsCounter = () => {
     updateCount();
   });
 };
+
+// Data Table
+const dataTable = () => {
+  const itemsPerPage = 10;
+  let currentPage = 1;
+
+  const fetchData = async () => {
+    try {
+      const response = await import("./mock-data.js");
+      const data = response.default;
+      renderPagination(data);
+      showPage(data, currentPage);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+
+  const populateData = (data) => {
+    const tableBody = document
+      .getElementById("data-table")
+      .getElementsByTagName("tbody")[0];
+
+    // Clear existing rows
+    tableBody.innerHTML = "";
+
+    data.forEach((item) => {
+      const row = tableBody.insertRow();
+      row.insertCell(0).textContent = item.id;
+      row.insertCell(1).textContent = item.first_name;
+      row.insertCell(2).textContent = item.last_name;
+      row.insertCell(3).textContent = item.email;
+      row.insertCell(4).textContent = item.gender;
+      row.insertCell(5).textContent = item.ip_address;
+      row.insertCell(6).textContent = item.bio;
+    });
+  };
+
+  const renderPagination = (data) => {
+    const totalPages = Math.ceil(data.length / itemsPerPage);
+    const paginationContainer = document.getElementById("pagination");
+
+    // Clear existing pagination
+    paginationContainer.innerHTML = "";
+
+    // Previous Button
+    const prevButton = document.createElement("button");
+    prevButton.textContent = "Previous";
+    prevButton.addEventListener("click", () => {
+      if (currentPage > 1) {
+        currentPage--;
+        showPage(data, currentPage);
+      }
+    });
+    paginationContainer.appendChild(prevButton);
+
+    // Page Buttons
+    for (
+      let i = Math.max(1, currentPage - 2);
+      i <= Math.min(totalPages, currentPage + 2);
+      i++
+    ) {
+      const button = document.createElement("button");
+      button.textContent = i;
+      button.addEventListener("click", () => {
+        currentPage = i;
+        showPage(data, currentPage);
+      });
+
+      if (i === currentPage) {
+        button.classList.add("active");
+      }
+
+      paginationContainer.appendChild(button);
+    }
+
+    // Next Button
+    const nextButton = document.createElement("button");
+    nextButton.textContent = "Next";
+    nextButton.addEventListener("click", () => {
+      if (currentPage < totalPages) {
+        currentPage++;
+        showPage(data, currentPage);
+      }
+    });
+    paginationContainer.appendChild(nextButton);
+  };
+
+  const showPage = (data, page) => {
+    const startIndex = (page - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    const slicedData = data.slice(startIndex, endIndex);
+    populateData(slicedData);
+    renderPagination(data);
+  };
+
+  fetchData();
+};

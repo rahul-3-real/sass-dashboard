@@ -1,0 +1,26 @@
+@use "../abstract/variables" as var;
+@use "../abstract/mixins" as mixin;
+
+.pagination {
+  width: 100%;
+  @include mixin.flex-end;
+  gap: 5px;
+
+  button {
+    padding: 5px 10px;
+    border: 1px solid var.$primary;
+    border-radius: 3px;
+    background: transparent;
+    color: var.$heading-clr;
+    font-size: 14px;
+    font-weight: 400;
+    transition: 0.5s ease all;
+    cursor: pointer;
+
+    &.active,
+    &:hover {
+      background: var.$primary;
+      color: var.$heading-clr;
+    }
+  }
+}

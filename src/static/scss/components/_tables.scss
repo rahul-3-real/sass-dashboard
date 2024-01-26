@@ -1,0 +1,30 @@
+@use "../abstract/variables" as var;
+
+// Tables
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: left;
+
+  tr:nth-child(even) {
+    background-color: var.$foreground;
+  }
+
+  th,
+  td {
+    padding: 10px 20px;
+  }
+
+  thead {
+    background: var.$primary;
+    color: var.$heading-clr;
+  }
+
+  tbody {
+    td {
+      font-size: 14px;
+      font-weight: 400;
+      color: var.$heading-clr;
+    }
+  }
+}
