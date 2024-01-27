@@ -1,0 +1,117 @@
+@use "../abstract/variables" as var;
+@use "../abstract/mixins" as mixin;
+
+.message-card {
+  .message-list {
+    form input {
+      padding: 15px 10px;
+      background: var.$foreground;
+      width: 100%;
+      border: 1px solid var.$text-clr;
+      border-radius: 3px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var.$heading-clr;
+      transition: 0.5s ease all;
+
+      &:focus {
+        border: 1px solid var.$primary;
+      }
+    }
+
+    ul {
+      margin-top: 30px;
+
+      li {
+        @include mixin.flex-start;
+        margin-bottom: 15px;
+        gap: 15px;
+        cursor: pointer;
+
+        .image {
+          width: 40px;
+          height: 40px;
+          overflow: hidden;
+          border-radius: 3px;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+          }
+        }
+
+        .text {
+          width: calc(100% - 55px);
+          h6 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var.$heading-clr;
+          }
+        }
+      }
+    }
+  }
+
+  .message-box {
+    .card-header {
+      @include mixin.flex-start;
+      gap: 15px;
+
+      .image {
+        width: 40px;
+        height: 40px;
+        overflow: hidden;
+        border-radius: 3px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+
+      .text {
+        width: calc(100% - 55px);
+        h6 {
+          font-size: 16px;
+          font-weight: 600;
+          color: var.$heading-clr;
+        }
+      }
+    }
+
+    .card-body {
+      height: calc(100vh - 370px);
+      overflow-y: auto;
+
+      h5 {
+        font-size: 20px;
+        font-weight: 600;
+        color: var.$text-clr;
+      }
+    }
+
+    .card-footer {
+      form {
+        @include mixin.flex-start;
+        gap: 15px;
+
+        input {
+          width: 100%;
+          padding: 15px;
+          background-color: var.$background;
+          border: 1px solid var.$foreground;
+          border-radius: 3px;
+          color: var.$heading-clr;
+        }
+
+        button {
+          padding: 14px;
+        }
+      }
+    }
+  }
+}
