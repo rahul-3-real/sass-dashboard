@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sass Dashboard</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/scss-dashboard/assets/apple-touch-icon-ppewHb3l.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/scss-dashboard/assets/favicon-32x32-lbxzv0Ei.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/scss-dashboard/assets/favicon-16x16-GLmeTw37.png"
+    />
+    <link
+      rel="icon"
+      type="image/ico"
+      href="/scss-dashboard/assets/favicon-pDPn6FYe.ico"
+    />
+
+    <!-- Links -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
+    <link rel="stylesheet" crossorigin href="/scss-dashboard/assets/index-QZMRqwZN.css">
+  </head>
+  <body data-theme="dark">
+    <!-- Wrapper -->
+    <div id="wrapper" class="wrapper">
+      <!-- Sidebar -->
+      <aside id="sidebar" class="sidebar">
+        <a href="./index.html" class="logo">
+          <img src="/scss-dashboard/assets/main-sUQ7AoVS.png" alt="" />
+          <h1>Sass Dashboard</h1>
+        </a>
+
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="./index.html" class="nav-link active">
+              <i class="fad fa-th-large"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link">
+              <i class="fad fa-user"></i>
+              <span>Authentication</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item">
+                <a href="./login.html" class="dropdown-link">Login</a>
+              </li>
+              <li class="dropdown-item">
+                <a href="./register.html" class="dropdown-link">Register</a>
+              </li>
+              <li class="dropdown-item">
+                <a href="./profile.html" class="dropdown-link">Profile</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="./email.html" class="nav-link">
+              <i class="fad fa-envelope"></i>
+              <span>Email</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="./messages.html" class="nav-link">
+              <i class="fad fa-comments"></i>
+              <span>Messages</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="./calendar.html" class="nav-link">
+              <i class="fad fa-calendar-alt"></i>
+              <span>Calendar</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="./charts.html" class="nav-link">
+              <i class="fad fa-chart-pie-alt"></i>
+              <span>Charts</span>
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link">
+              <i class="fad fa-list"></i>
+              <span>Components</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item">
+                <a href="./tables.html" class="dropdown-link">Tables</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Content -->
+      <main id="content" class="content">
+        <!-- Navbar -->
+        <nav class="navbar" id="navbar">
+          <div class="container">
+            <div class="d-flex align-center justify-between">
+              <div class="col-start">
+                <div class="d-flex align-center justify-start g-5">
+                  <button id="sidebar-toggle" class="sidebar-toggle-btn">
+                    <i class="fad fa-bars"></i>
+                  </button>
+                  <h6 id="greeting" class="greeting"></h6>
+                </div>
+              </div>
+              <div class="col-end">
+                <div class="d-flex align-center justify-end g-5">
+                  <!-- Search -->
+                  <div id="search" class="search dropdown drop-end">
+                    <button class="dropdown-toggle">
+                      <i class="fad fa-search"></i>
+                    </button>
+                    <div class="dropdown-menu">
+                      <form>
+                        <i class="fad fa-search"></i>
+                        <input type="search" placeholder="Search..." />
+                      </form>
+                      <ul class="search-list">
+                        <li class="list-item">
+                          <b>Recently Searched :</b>
+                        </li>
+                        <li class="list-item">
+                          <i class="fad fa-dot-circle"></i>
+                          <span>Lorem, ipsum dolor.</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- Notification -->
+                  <div id="notification" class="notification dropdown drop-end">
+                    <button class="dropdown-toggle">
+                      <i class="fad fa-bell"></i>
+                      <span class="active-notification"></span>
+                    </button>
+                    <div class="dropdown-menu">
+                      <ul class="notification-list">
+                        <li class="list-item">
+                          <b>Notifications :</b>
+                        </li>
+                        <li class="list-item">
+                          <i class="fad fa-dot-circle"></i>
+                          <span>Lorem, ipsum dolor.</span>
+                        </li>
+                        <li class="list-item">
+                          <i class="fad fa-dot-circle"></i>
+                          <span>Lorem, ipsum dolor.</span>
+                        </li>
+                        <li class="list-item">
+                          <i class="fad fa-dot-circle"></i>
+                          <span>Lorem, ipsum dolor.</span>
+                        </li>
+                        <li class="list-item">
+                          <i class="fad fa-dot-circle"></i>
+                          <span>Lorem, ipsum dolor.</span>
+                        </li>
+                        <li class="list-item">
+                          <i class="fad fa-dot-circle"></i>
+                          <span>Lorem, ipsum dolor.</span>
+                        </li>
+                        <li class="list-item">
+                          <i class="fad fa-dot-circle"></i>
+                          <span>Lorem, ipsum dolor.</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- Theme Toggle -->
+                  <button id="theme-toggle" class="theme-toggle">
+                    <i class="fad fa-lightbulb"></i>
+                  </button>
+
+                  <!-- Zoom Toggle -->
+                  <button id="zoom-toggle" class="zoom-toggle">
+                    <i class="fad fa-expand-wide"></i>
+                  </button>
+
+                  <!-- Profile -->
+                  <div id="profile" class="profile dropdown drop-end">
+                    <button class="dropdown-toggle">
+                      <img src="/scss-dashboard/assets/boy-UNPwPpjL.jpg" alt="" />
+                    </button>
+                    <div class="dropdown-menu">
+                      <div class="profile-head">
+                        <div class="image">
+                          <img src="/scss-dashboard/assets/boy-UNPwPpjL.jpg" alt="" />
+                        </div>
+                        <div class="text">
+                          <h6>John Doe <sup>Pro</sup></h6>
+                          <p>johndoe@company.com</p>
+                        </div>
+                      </div>
+                      <ul class="profile-nav">
+                        <li class="nav-item">
+                          <a class="nav-link" href="./profile.html"
+                            >My Profile</a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="./projects.html">
+                            My Projects
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="./account-settings.html">
+                            Account Settings
+                          </a>
+                        </li>
+                        <li class="nav-divider"></li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="./login.html">Sign Out</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Section -->
+        <section class="section" id="section">
+          <div class="container">
+            <!-- Page Title -->
+            <div class="page-title">
+              <div class="d-grid align-center">
+                <div class="col-6">
+                  <h1>Dashboard</h1>
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                      <a href="#" class="breadcrumb-link">Home</a>
+                    </li>
+                    <li class="breadcrumb-item active">Dashboard</li>
+                  </ol>
+                </div>
+                <div class="col-6"></div>
+              </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="mt-10 d-grid">
+              <div class="col-3">
+                <div class="card stats-card">
+                  <div class="card-body">
+                    <div class="d-flex align-center justify-between">
+                      <h6><span data-count="1628">1628</span>+</h6>
+                      <i class="fal fa-pencil-paintbrush"></i>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <h6>Website Designing</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="card stats-card">
+                  <div class="card-body">
+                    <div class="d-flex align-center justify-between">
+                      <h6><span data-count="1537">1537</span>+</h6>
+                      <i class="fal fa-terminal"></i>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <h6>Website Development</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="card stats-card">
+                  <div class="card-body">
+                    <div class="d-flex align-center justify-between">
+                      <h6><span data-count="1456">1456</span>+</h6>
+                      <i class="fal fa-suitcase"></i>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <h6>Brand Building</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="card stats-card">
+                  <div class="card-body">
+                    <div class="d-flex align-center justify-between">
+                      <h6><span data-count="1521">1521</span>+</h6>
+                      <i class="fal fa-mobile"></i>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <h6>Responsive Design</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Chart -->
+            <div class="mt-10 d-grid">
+              <div class="col-8">
+                <div class="card h-100">
+                  <div class="card-header">
+                    <h5>Production Chart</h5>
+                  </div>
+                  <div class="card-body">
+                    <div id="production-chart"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="card h-100">
+                  <div class="card-header">
+                    <h5>Expenses Chart</h5>
+                  </div>
+                  <div class="card-body">
+                    <div id="expenses-chart"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer" class="footer">
+          <div class="container">
+            <div class="d-grid">
+              <div class="col-6">
+                <p>
+                  Made with <i class="fas fa-heart text-primary"></i> by
+                  <a href="#" target="_blank">Rahul Yadav</a>
+                </p>
+              </div>
+              <div class="col-6">
+                <div class="social">
+                  <a href="#" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a href="#" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                  <a href="#" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a href="#" target="_blank">
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a href="#" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="./static/js/app.js"></script>
+
+    <script>
+      // Calling Functions
+      themeToggle();
+      fullScreenToggle();
+      toggleSidebar();
+      sidebarDropdownToggle();
+      dropdownToggle();
+      showGreeting();
+      productionChart();
+      expensesChart();
+      statsCounter();
+    </script>
+  </body>
+</html>
